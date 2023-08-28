@@ -5,7 +5,9 @@
 [![Go Report Card Badge]][Go Report Card]
 [![GoDoc Badge]][GoDoc]
 
-This repo contains a package for creating [BitBar](https://github.com/matryer/bitbar) plugins in Go.
+This repo contains a package for creating [SwiftBar](https://github.com/swiftbar/SwiftBar) plugins in Go.
+
+It is forked by me [chew-z](https://github.com/chew-z) from [go-bitbar](https://github.com/johnmccabe/go-bitbar) and all credits should go there. I have just added logic for Swiftbar's WebView component. And in the future I hope to add some more logic (Swiftbar has some extended capabilities over original Bitbar and xbar (Bitbar reboot)) and push PR.
 
 ## Usage
 
