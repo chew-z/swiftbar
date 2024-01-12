@@ -208,7 +208,8 @@ func (l *Line) Href(s string) *Line {
 //	line.WebView("http://github.com/johnmccabe/bitbar", 800, 640)
 func (l *Line) WebView(url string, w int, h int) *Line {
 	l.href = url
-	l.webview = true
+	b := true
+	l.webview = &b
 	l.webvieww = w
 	l.webviewh = h
 	return l
@@ -424,7 +425,7 @@ func renderImageOptions(l *Line) []string {
 func renderMiscOptions(l *Line) []string {
 	miscOptions := []string{}
 	if l.href != "" {
-		if l.webview {
+		if l.webview != nil {
 			miscOptions = append(miscOptions, fmt.Sprintf("href='%s' webview=true webvieww=%d webviewh=%d", l.href, l.webvieww, l.webviewh))
 		} else {
 			miscOptions = append(miscOptions, fmt.Sprintf("href='%s'", l.href))
