@@ -214,7 +214,7 @@ func (l *Line) WebView(url string, dim ...int) *Line {
 		l.webvieww = dim[0]
 	}
 	if len(dim) > 1 {
-		l.webviewh = h
+		l.webviewh = dim[1]
 	}
 	return l
 }
