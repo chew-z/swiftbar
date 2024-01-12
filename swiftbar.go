@@ -26,7 +26,7 @@ type Plugin struct {
 type Line struct {
 	text          string
 	href          string
-	webview       bool
+	webview       *bool
 	webvieww      int
 	webviewh      int
 	color         string
