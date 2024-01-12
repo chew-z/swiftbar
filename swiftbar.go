@@ -432,7 +432,7 @@ func renderMiscOptions(l *Line) []string {
 	miscOptions := []string{}
 	if l.href != "" {
 		if l.webview != nil {
-			miscOptions = append(miscOptions, fmt.Sprintf("href='%s' webview='true' webvieww=%s webviewh=%s", l.href, l.webvieww, l.webviewh))
+			miscOptions = append(miscOptions, fmt.Sprintf("href='%s' webview='true' webvieww='%s' webviewh='%s'", l.href, l.webvieww, l.webviewh))
 		} else {
 			miscOptions = append(miscOptions, fmt.Sprintf("href='%s'", l.href))
 		}
