@@ -210,6 +210,8 @@ func (l *Line) WebView(url string, dim ...int) *Line {
 	l.href = url
 	b := true
 	l.webview = &b
+	l.webvieww = 720
+	l.webviewh = 480
 	if len(dim) > 0 {
 		l.webvieww = dim[0]
 	}
