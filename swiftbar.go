@@ -27,8 +27,8 @@ type Line struct {
 	text          string
 	href          string
 	webview       *bool
-	webvieww      int
-	webviewh      int
+	webvieww      string
+	webviewh      string
 	color         string
 	font          string
 	size          int
@@ -206,12 +206,12 @@ func (l *Line) Href(s string) *Line {
 // WebView adds a URL to the line and makes it clickable.
 //
 //	line.WebView("http://github.com/johnmccabe/bitbar", 800, 640)
-func (l *Line) WebView(url string, dim ...int) *Line {
+func (l *Line) WebView(url string, dim ...string) *Line {
 	l.href = url
 	b := true
 	l.webview = &b
-	l.webvieww = 720
-	l.webviewh = 480
+	l.webvieww = "720"
+	l.webviewh = "480"
 	if len(dim) > 0 {
 		l.webvieww = dim[0]
 	}
